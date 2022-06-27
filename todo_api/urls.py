@@ -1,9 +1,9 @@
-import django
-
-
-from django.urls import path
-from . import views
+# todo/todo_api/urls.py : API urls.py
+from django.urls import path, include
+from .views import (
+    TodoListApiView,
+)
 
 urlpatterns = [
-    path("hello/", views.say_hello)
+    path('api', TodoListApiView.as_view()),
 ]
